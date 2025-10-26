@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Readex Pro", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.background-header-hero.sticky-active {
+    padding-top: 100px;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+#cookie-consent {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 350px;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, visibility 0.5s;
+}
+
+#cookie-consent.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#cookie-consent p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #2e2b2b;
+}
+
+.cookie-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cookie-buttons button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#accept-cookie {
+    background-color: #0d47a1;
+    color: white;
+}
+
+#reject-cookie {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+#accept-cookie:hover {
+    background-color: #0c3c8e;
+}
+
+#reject-cookie:hover {
+    background-color: #ccc;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.preloader-gif {
+    width: 100px;
+    height: 100px;
+}
+
+#preloader.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    visibility: hidden;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.background {
+    background-image: url(./img/6fac4dba-2311-4a23-a5e5-bb9be7fb0ae4.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 2000px;
+    background-position: center top;
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+
+.counter {
+    display: inline-block;
+    font-weight: 700;
+}
+
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+
+.header-container {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.header-container.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(13, 71, 161, 0.95);
+    z-index: 1000;
+    margin: 0;
+    padding: 0 30px;
+}
+
+.header-container.sticky .header-logo-text {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-right: 50px;
+}
+
+.header-nav__link {
+    text-decoration: none;
+    color: white;
+}
+
+.header-logo {
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    color: white;
+}
+
+.hero-container {
+    margin-top: 100px;
+}
+
+.hero {
+    margin-left: 400px;
+    display: flex;
+    justify-content: left;
+}
+
+.hero-title {
+    font-size: 70px;
+    color: white;
+}
+
+.hero-maintext {
+    display: grid;
+    margin-right: 100px;
+    color: white;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.hero-button-text {
+    text-decoration: none;
+    background-color: #EBF2F8;
+    color: #314B58;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.hero-button {
+    margin-top: 50px;
+}
+
+.main-container {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.main-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.main-left-text,
+.main-right-text,
+.main-title {
+    text-align: center;
+    color: #486476;
+}
+
+.main-left-text,
+.main-right-text {
+    letter-spacing: 2px;
+    margin-top: 100px;
+    font-size: 30px;
+}
+
+.main-title {
+    margin-bottom: 50px;
+    font-size: 70px;
+}
+
+.main {
+    margin-top: 700px;
+}
+
+.diamond-container {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diamond-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.2));
+
+}
+
+.background-diamond {
+    position: absolute;
+    background-color: rgba(220, 230, 240, 0.5);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    z-index: 1;
+}
+
+.background-diamond-1 {
+    width: 850px;
+    height: 850px;
+    top: -20px;
+    left: -20px;
+    transform: rotate(5deg);
+}
+
+.background-diamond-2 {
+    width: 820px;
+    height: 820px;
+    bottom: -20px;
+    right: -20px;
+    background-color: rgba(200, 215, 230, 0.4);
+    transform: rotate(-10deg);
+}
+
+.aaa {
+    margin-top: 200px;
+}
+
+.img {
+    background-image: url(./img/browser_kNq65q4ujF.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+    margin-top: 700px;
+}
+
+.adventures-container {
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    gap: 40px;
+}
+
+.adventure-title {
+    color: #1D3E54;
+    font-size: 70px;
+}
+
+.adventure-text {
+    color: #658899;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.adventure-description {
+    display: inline-block;
+    justify-content: center;
+}
+
+.cards {
+    margin-top: 50px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 100px;
+    margin-left: 250px;
+    margin-right: 250px;
+    margin-top: 100px;
+    perspective: 1500px;
+}
+
+.cards-title {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 300px;
+}
+
+.cards-three {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    background-color: rgb(220, 220, 220, 0.2);
+    border-radius: 20px;
+    transition: transform 0.4s ease-out;
+}
+
+.card-title {
+    font-size: 50px;
+}
+
+.cards {
+    background-image: url(./img/5472205424129345235.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+}
+
+.cards-three a {
+    text-decoration: none;
+    margin-top: 50px;
+    background-color: #EBF2F8;
+    color: #314B58;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.cards-text,
+.card-title,
+.cards-title {
+    color: white;
+}
+
+.cards-text {
+    line-height: 25px;
+}
+
+.footer {
+    margin-top: 100px
+}
+
+.footer-nav {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-left: 600px;
+    margin-right: 600px;
+    margin-bottom: 100px;
+}
+
+.footer-nav__link {
+    text-decoration: none;
+    letter-spacing: 7px;
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        margin-left: 100px;
+        display: flex;
+        justify-content: left;
+    }
+
+    .main-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .main-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 150px;
+    }
+
+    .main-left-text,
+    .main-right-text,
+    .main-title {
+        text-align: center;
+        color: #486476;
+    }
+
+    .main-left-text,
+    .main-right-text {
+        letter-spacing: 2px;
+        margin-top: 100px;
+        font-size: 18px;
+    }
+
+    .main-title {
+        margin-bottom: 50px;
+        font-size: 38px;
+    }
+
+    .main {
+        margin-top: 700px;
+    }
+
+    .adventures-container {
+        margin-left: 150px;
+        margin-right: 150px;
+        display: flex;
+        gap: 40px;
+    }
+
+    .adventure-title {
+        color: #1D3E54;
+        font-size: 38px;
+    }
+
+    .adventure-text {
+        color: #658899;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .adventure-description {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .cards {
+        margin-top: 50px;
+    }
+
+    .cards-container {
+        display: flex;
+        gap: 35px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 100px;
+        perspective: 1500px;
+    }
+
+    .cards-title {
+        text-align: center;
+        font-size: 70px;
+        margin-top: 300px;
+    }
+
+    .cards-three {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        background-color: rgb(220, 220, 220, 0.2);
+        border-radius: 20px;
+        transition: transform 0.4s ease-out;
+    }
+
+    .card-title {
+        font-size: 35px;
+    }
+
+    .cards {
+        background-image: url(./img/5472205424129345235.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 1000px;
+    }
+
+    .cards-three a {
+        text-decoration: none;
+        margin-top: 50px;
+        background-color: #EBF2F8;
+        color: #314B58;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 4px;
+    }
+
+    .cards-text,
+    .card-title,
+    .cards-title {
+        color: white;
+    }
+
+    .cards-text {
+        font-size: 13px;
+    }
+
+    .cards-text {
+        line-height: 20px;
+    }
+
+    .footer {
+        margin-top: 100px
+    }
+
+    .footer-nav {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-bottom: 100px;
+    }
+
+    .footer-nav__link {
+        text-decoration: none;
+        letter-spacing: 7px;
+    }
+}
