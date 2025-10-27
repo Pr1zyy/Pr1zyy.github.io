@@ -118,15 +118,13 @@ body.loading {
     visibility: visible;
 }
 
-.background {
+.backgroundd {
     background-image: url(./img/6fac4dba-2311-4a23-a5e5-bb9be7fb0ae4.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     height: 2000px;
     background-position: center top;
-    will-change: transform;
-    transition: transform 0.1s linear;
 }
 
 
@@ -576,5 +574,35 @@ ul {
     .footer-nav__link {
         text-decoration: none;
         letter-spacing: 7px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 35px;
+    }
+
+    .hero-maintext {
+        font-size: 20px;
+        display: block;
+    }
+
+    .diamond-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .background-diamond-1 {
+        width: 450px;
+        height: 450px;
+    }
+
+    .background-diamond-2 {
+        width: 420px;
+        height: 420px;
+    }
+
+    .adventure-text{
+        font-size: 15px;
     }
 }
