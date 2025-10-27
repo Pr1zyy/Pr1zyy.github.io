@@ -602,7 +602,104 @@ ul {
         height: 420px;
     }
 
-    .adventure-text{
+    .adventure-text {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 424px) {
+    .header-nav {
+        opacity: 0;
+    }
+
+    .header-logo-text {
+        opacity: 0;
+    }
+
+    .header-logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-maintext {
+        font-size: 10px;
+        line-height: 17px;
+    }
+
+    .hero-title {
+        font-size: 15px;
+    }
+
+    .main-left-text,
+    .main-right-text {
+        letter-spacing: 0;
+        font-size: 10px;
+    }
+
+    .main-flex {
+        gap: 20px;
+    }
+
+    .diamond-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .background-diamond-1 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .background-diamond-2 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .adventures-container {
+        margin-left: 10px;
+        margin-right: 10px;
+        display: block;
+        gap: 40px;
+    }
+    .adventure-title{
+        font-size: 15px;
+    }
+    .adventure-img{
+        display: flex;
+        justify-content: center;
+    }
+    .cards-title{
+        font-size: 20px;
+        margin-top: 150px;
+    }
+    .card-title{
+        font-size: 15px;
+    }
+    .cards-text{
+        font-size: 10px;
+        line-height: 13px;
+    }
+    .cards-three a{
+        font-size: 15px;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    .cards-three span{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .cards-container{
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .footer-container{
+        margin-left: 10;
+        margin-right: 10;
+    }
+    .footer-nav__link{
+        font-size: 10px;
+        letter-spacing: 0;
     }
 }
